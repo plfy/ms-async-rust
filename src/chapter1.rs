@@ -1,5 +1,4 @@
 #[test]
-fn test_msg() {
-    let s = "hello world";
-    assert_eq!(s, "hello world");
+fn test_chapter1() {
+    println!("chapter1..");
 }
