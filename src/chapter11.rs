@@ -2,6 +2,7 @@ use std::{
     cell::Cell,
     ops::Deref,
     sync::{Arc, Mutex},
+    vec,
 };
 
 #[test]
@@ -15,6 +16,10 @@ fn test_chapter11() {
     *a1.lock().unwrap() += 1;
 
     println!("{:?},{:?}", a1, a2);
+
+    let nums = vec![1, 2, 3];
+    let value = nums.iter().fold(0, |acc, n| acc + *n);
+    println!("value is:{value}");
 }
 
 fn hello(s: &str) {
